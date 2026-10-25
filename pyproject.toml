@@ -1,0 +1,30 @@
+[project]
+name = "research-assistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "aboud", email = "abdulrhmanmadi395@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "chainlit>=2.12.0",
+    "httpx>=0.28.1",
+    "langchain>=1.4.5",
+    "langchain-google-genai>=4.4.2",
+    "langchain-openai>=1.7.1",
+    "pydantic>=2.14.1",
+    "pypdf>=6.21.1",
+]
+
+[project.scripts]
+research-assistant = "research_assistant:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
